@@ -18,9 +18,11 @@ Users can browse trending movies, watch trailers, and view cast information in a
 ---
 ## Screenshots
 
-<img src="assets/output1.png" width="800">
+## 📸 Screenshots
 
-<img src="assets/output2.png" width="800">
+![Home](assets/output1.png)
+
+![Trailer Modal](assets/output2.png)
 ## 🛠 Tech Stack
 
 * HTML
