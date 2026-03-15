@@ -16,7 +16,11 @@ Users can browse trending movies, watch trailers, and view cast information in a
 * Responsive layout for mobile, tablet, and desktop
 
 ---
+## Screenshots
 
+<img src="assets/output1.png" width="800">
+
+<img src="assets/output2.png" width="800">
 ## 🛠 Tech Stack
 
 * HTML
