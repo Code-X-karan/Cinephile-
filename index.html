@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cinephile — Discover Movies</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link style="font-size: x-larger;" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="navbar-inner">
+            <a href="#" class="logo" id="logoLink">Cinephile</a>
+            <div class="search-wrap">
+                <input type="text" id="searchInput" class="search-input" placeholder="Search movies..." autocomplete="off">
+                <button type="button" id="searchBtn" class="search-btn" aria-label="Search"><i class="fa-brands fa-searchengin"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="hero-inner">
+                <p class="hero-label">Trending this week</p>
+                <h1 class="hero-title">Discover movies</h1>
+                <p class="hero-desc">Browse trending titles, watch trailers, and explore cast </p>
+            </div>
+        </section>
+        <section class="trending-section">
+            <div class="section-head">
+                <h2 class="section-title">Trending Movies</h2>
+                <p class="section-subtitle" id="sectionSubtitle">Popular movies this week</p>
+            </div>
+            <div id="moviesGrid" class="movies-grid">
+                <div id="skeletonGrid" class="skeleton-grid">
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                    <div class="skeleton-card"></div>
+                </div>
+            </div>
+            <div id="emptyState" class="empty-state hidden">
+                <p>No movies found. Try another search.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+          
+            <p style="margin-left: 40%;" class="footer-credit">© Code-X-Karan · <a href="https://github.com/Code-X-Karan" target="_blank" rel="noopener">GitHub</a> — more projects</p>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-dialog">
+            <button type="button" id="modalClose" class="modal-close" aria-label="Close">&times;</button>
+            <div class="modal-content">
+                <div class="modal-main">
+                    <div class="modal-poster-wrap">
+                        <img id="modalPoster" class="modal-poster-img" src="" alt="">
+                        <div class="modal-poster-overlay"></div>
+                    </div>
+                    <div class="modal-body">
+                        <h2 id="modalTitle" class="modal-title"></h2>
+                        <div class="modal-meta">
+                            <span id="modalRating" class="rating-badge"></span>
+                            <span id="modalYear" class="modal-year"></span>
+                        </div>
+                        <p id="modalOverview" class="modal-overview"></p>
+                        <button type="button" id="watchlistBtn" class="watchlist-btn">Add to watchlist</button>
+                        <button type="button" id="trailerBtn" class="trailer-btn hidden">▶ Play Trailer</button>
+                        <div id="trailerWrap" class="trailer-wrap hidden">
+                            <button type="button" id="closeTrailerBtn" class="close-trailer-btn" aria-label="Close trailer">&times;</button>
+                            <div class="trailer-embed">
+                                <iframe id="trailerFrame" src="" title="Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="providers-section">
+                            <h3 class="providers-title">Available on</h3>
+                            <div id="providersGrid" class="providers-grid"></div>
+                        </div>
+                        <div class="cast-section">
+                            <h3 class="cast-title">Cast</h3>
+                            <div id="castGrid" class="cast-grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
