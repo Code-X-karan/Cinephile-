@@ -19,7 +19,7 @@ Users can browse trending movies, watch trailers, and view cast information in a
 #Screenshots
 
   <img src="assests/output1.png" width="45%">
-  <img src="assests/output2.png" width="45%">
+  <img src="assests/ouput2.png" width="45%">
 
 
 ## 🛠 Tech Stack
